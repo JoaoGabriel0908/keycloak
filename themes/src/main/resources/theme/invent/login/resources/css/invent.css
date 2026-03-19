@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --invent-primary: #3b82f6;
+    --invent-primary-dark: #2563eb;
+    --invent-bg: #f0f4ff;
+    --invent-text: #111827;
+    --invent-text-muted: #6b7280;
+    --invent-text-light: #9ca3af;
+    --invent-border: #e5e7eb;
+    --invent-feature-bg: #f9fafb;
+    --invent-radius: 10px;
+    --keycloak-bg-logo-url: none;
+}
+
+* { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; }
+
+/* Background */
+body#keycloak-bg {
+    background: var(--invent-bg) !important;
+    background-image:
+        radial-gradient(circle at 20% 50%, rgba(59,130,246,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(59,130,246,0.06) 0%, transparent 50%),
+        radial-gradient(circle at 60% 80%, rgba(147,197,253,0.08) 0%, transparent 50%) !important;
+}
+
+.login-pf body { background: none !important; }
+
+/* Layout */
+.pf-v5-c-login { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+.pf-v5-c-login__container { grid-template-columns: minmax(auto, 440px) !important; max-width: 480px; width: 100%; padding: 20px; }
+
+/* Header */
+.invent-header { text-align: center; padding-bottom: 8px; }
+
+.invent-logo-icon {
+    width: 64px; height: 64px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 16px;
+    box-shadow: 0 4px 14px rgba(59,130,246,0.35);
+}
+
+#kc-header-wrapper {
+    color: var(--invent-primary) !important;
+    font-size: 28px !important; font-weight: 700 !important;
+    text-transform: none !important; letter-spacing: 0 !important;
+}
+
+.invent-subtitle { font-size: 18px; color: var(--invent-text-muted); margin: 4px 0 0; text-align: center; font-weight: bold; }
+
+/* Card */
+.pf-v5-c-login__main {
+    border-radius: 16px !important;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04) !important;
+    border: 1px solid rgba(59,130,246,0.1) !important;
+    overflow: hidden;
+}
+
+.pf-v5-c-login__main-header { border-top: none !important; padding-bottom: 8px;display: flex;
+        justify-content: center; align-items: center; gap: 8px; }
+
+/* Title */
+.pf-v5-c-title.pf-m-3xl, h1#kc-page-title {
+    font-size: 22px !important; font-weight: 700 !important;
+    color: var(--invent-text) !important; text-align: center;
+}
+
+/* Card desc */
+.invent-card-desc { font-size: 14px; color: var(--invent-text-muted); margin: 0 0 16px; text-align: center; }
+
+/* Features grid */
+.invent-features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 24px; }
+
+.invent-feature-item {
+    display: flex; align-items: flex-start; gap: 10px; padding: 12px;
+    background: var(--invent-feature-bg); border-radius: 10px;
+    border: 1px solid #f3f4f6; transition: border-color 0.2s;
+}
+.invent-feature-item:hover { border-color: #bfdbfe; }
+.invent-feature-icon { flex-shrink: 0; margin-top: 2px; }
+.invent-feature-text { display: flex; flex-direction: column; }
+.invent-feature-text strong { font-size: 13px; font-weight: 600; color: var(--invent-text); line-height: 1.3; }
+.invent-feature-text span { font-size: 11px; color: var(--invent-text-light); line-height: 1.3; }
+
+/* Labels */
+.pf-v5-c-form__label-text { font-size: 13px !important; font-weight: 600 !important; color: #374151 !important; }
+
+/* Inputs */
+.pf-v5-c-form-control { border-radius: var(--invent-radius) !important; }
+.pf-v5-c-input-group { border-radius: var(--invent-radius) !important; overflow: hidden; }
+
+/* Button */
+.pf-v5-c-button.pf-m-primary {
+    background: linear-gradient(135deg, var(--invent-primary), var(--invent-primary-dark)) !important;
+    border: none !important; border-radius: var(--invent-radius) !important;
+    font-size: 15px !important; font-weight: 600 !important; padding: 12px 24px !important;
+    box-shadow: 0 2px 8px rgba(59,130,246,0.3) !important;
+}
+.pf-v5-c-button.pf-m-primary:hover { opacity: 0.92; box-shadow: 0 4px 14px rgba(59,130,246,0.4) !important; }
+
+/* Links */
+.pf-v5-c-button.pf-m-link, a { color: var(--invent-primary) !important; }
+
+/* Password toggle */
+.pf-v5-c-button.pf-m-control { border-radius: 0 var(--invent-radius) var(--invent-radius) 0 !important; }
+
+/* Checkbox */
+.pf-v5-c-check__input { accent-color: var(--invent-primary); }
+
+/* Social */
+.pf-v5-c-button.pf-m-secondary { border-radius: var(--invent-radius) !important; }
+.pf-v5-c-button.pf-m-secondary:hover { border-color: var(--invent-primary) !important; }
+
+/* Alerts */
+.pf-v5-c-alert.pf-m-inline { border-radius: 8px; }
+
+/* Footer band */
+.pf-v5-c-login__main-footer-band { background: var(--invent-feature-bg) !important; }
+.pf-v5-c-login__main-footer-band-item { text-align: center; font-size: 13px; color: var(--invent-text-muted); }
+
+/* Divider */
+.invent-divider { display: flex; align-items: center; margin: 24px 0 16px; gap: 12px; }
+.invent-divider::before, .invent-divider::after { content: ''; flex: 1; height: 1px; background: var(--invent-border); }
+.invent-divider span { font-size: 11px; font-weight: 600; color: var(--invent-text-light); letter-spacing: 1px; }
+
+/* Terms */
+.invent-terms { text-align: center; font-size: 12px; color: var(--invent-text-light); line-height: 1.5; margin: 0; }
+.invent-terms a { color: var(--invent-primary) !important; text-decoration: none; font-weight: 500; }
+.invent-terms a:hover { text-decoration: underline; }
+
+/* Footer */
+.invent-footer { text-align: center; margin-top: 24px; }
+.invent-footer-secure { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 13px; color: var(--invent-text-muted); margin: 0 0 8px; }
+.invent-footer-copy { font-size: 12px; color: var(--invent-text-light); margin: 0; }
+
+/* Mobile */
+@media (max-width: 520px) {
+    .pf-v5-c-login__container { padding: 12px !important; }
+    .pf-v5-c-login__main { border-radius: 12px !important; }
+    .invent-features { grid-template-columns: 1fr; }
+}
